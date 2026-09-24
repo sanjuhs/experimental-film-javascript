@@ -1,0 +1,26 @@
+:root{
+  --bg:#14110f; --panel:#1d1916; --ink:#efe6d8; --muted:#a3988a; --line:#342d27; --accent:#e2a766;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+header{max-width:1280px;margin:0 auto;padding:28px 16px 14px}
+.eyebrow{margin:0 0 6px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(28px,4vw,44px)}
+h1 em{color:var(--muted);font-weight:400}
+main{max-width:1280px;margin:0 auto;padding:0 16px 48px}
+.stage{position:relative;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+canvas{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.bigplay{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);display:flex;gap:10px;align-items:center;
+  padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(20,16,12,.45);
+  color:#fff;font:500 15px Inter,sans-serif;letter-spacing:.04em;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.bigplay:hover{background:rgba(20,16,12,.7)}
+.bigplay.hidden{display:none}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px;padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.controls button{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:7px 12px;font:500 13px Inter,sans-serif;cursor:pointer}
+.controls button:hover{border-color:var(--muted)}
+.controls button.primary{background:var(--accent);color:#1b140d;border-color:var(--accent)}
+.controls span{font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted);min-width:34px}
+#scrub{flex:1;min-width:120px;accent-color:var(--accent)}
+.status{min-height:20px;font-size:13px;color:var(--accent);margin:10px 2px 0}
+.notes{margin-top:18px;color:var(--muted);font-size:14px;line-height:1.6;max-width:760px}
+.notes strong{color:var(--ink)}

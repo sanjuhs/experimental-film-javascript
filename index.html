@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Lumière — Home Tour</title>
+<meta name="description" content="An experimental home-tour film rendered entirely in JavaScript on a canvas: no images, no video files, no 3D libraries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <p class="eyebrow">Experimental film · pure JavaScript</p>
+  <h1>Maison Lumière <em>— a home tour</em></h1>
+</header>
+
+<main>
+  <div class="stage">
+    <canvas id="film" width="1920" height="1080" aria-label="Animated home tour film"></canvas>
+    <button id="bigplay" class="bigplay" aria-label="Play with sound">
+      <span>▶</span> Play with sound
+    </button>
+  </div>
+
+  <div class="controls">
+    <button id="play" aria-label="Pause">❚❚</button>
+    <span id="time">0:00</span>
+    <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Seek">
+    <span id="dur">0:36</span>
+    <button id="sound" aria-label="Toggle sound">Sound: off</button>
+    <button id="export" class="primary">Export video</button>
+  </div>
+  <p id="status" class="status"></p>
+
+  <section class="notes">
+    <p>Every pixel above is computed live: a tiny perspective 3D engine drawn with the Canvas 2D API, per-face lighting with ACES tone mapping, volumetric sun beams, soft bloom, film grain and a generative Web Audio score. No images, video files or libraries.</p>
+    <p><strong>Export video</strong> records the film in real time from the canvas (MediaRecorder) and downloads it as MP4 or WebM, depending on your browser.</p>
+  </section>
+</main>
+<script src="film.js"></script>
+</body>
+</html>
